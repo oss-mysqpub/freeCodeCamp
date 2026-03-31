@@ -23,7 +23,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=daniel-borek-sonarsource_freeCodeCamp_384dbd8e-c435-4a03-b1fc-bccea8c086e1
+            -Dsonar.projectKey=oss-mysqepub_freeCodeCamp_80d36dde-947a-4650-94ef-124192f03748
 #            -Dsonar.projectName="Your Project Name"
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.

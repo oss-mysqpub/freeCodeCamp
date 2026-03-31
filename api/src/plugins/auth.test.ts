@@ -18,6 +18,7 @@ async function setupServer() {
 }
 
 const THIRTY_DAYS_IN_SECONDS = 2592000;
+const INVALID_JWT_SECRET = 'test-invalid-secret-not-for-production'; // NOSONAR: intentionally wrong secret used to test JWT rejection
 
 describe('auth', () => {
   let fastify: FastifyInstance;
@@ -135,7 +136,7 @@ describe('auth', () => {
 
       const token = jwt.sign(
         { accessToken: createAccessToken('123') },
-        'invalid-secret'
+        INVALID_JWT_SECRET
       );
 
       const res = await fastify.inject({
